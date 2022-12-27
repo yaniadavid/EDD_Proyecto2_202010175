@@ -14,9 +14,6 @@ class User{
         this.passwordC = passwordC;
         this.next = null;
         this.id = id;
-        this.friends = new stackFriend();
-        this.block = new queueBlock();
-        this.playlist = new doubleListPlaylist();
     }
 }
 
@@ -113,27 +110,27 @@ class listUsers{
     }
  
 
-    grafica(){
-        var graphUser = "digraph G { \n rankdir=\"LR\";\n";
-        var nodoaux = this.head;
-        
-        for(let i = 0; i < this.size; i++){
-            graphUser += "user" + nodoaux.id + "[label=\"" + nodoaux.username + "\"];\n";
-            
-            nodoaux = nodoaux.next;
-        }
-        nodoaux = this.head;
-        for(let i = 0; i < this.size - 1; i++){
-            if(nodoaux.next != null){
-                graphUser += "user" + nodoaux.id + "->" + "user" + (nodoaux.id + 1) + ";\n";
-            }
-            nodoaux = nodoaux.next;
-        }
-        
-        graphUser += "}";
-        //console.log(graphUser);
-        return graphUser;
-    }
+    //grafica(){
+    //    var graphUser = "digraph G { \n rankdir=\"LR\";\n";
+    //    var aux = this.head;
+    //    
+    //    for(let i = 0; i < this.size; i++){
+    //        graphUser += "user" + aux.id + "[label=\"" + aux.username + "\"];\n";
+    //        
+    //        aux = aux.next;
+    //    }
+    //    aux = this.head;
+    //    for(let i = 0; i < this.size - 1; i++){
+    //        if(aux.next != null){
+    //            graphUser += "user" + aux.id + "->" + "user" + (aux.id + 1) + ";\n";
+    //        }
+    //        aux = aux.next;
+    //    }
+//
+    //    graphUser += "}";
+    //    //console.log(graphUser);
+    //    return graphUser;
+    //}
 }
 
 
@@ -336,13 +333,411 @@ class Arbol_AVL{
     }
 }
 
+//---------------------------------- ACTORES ----------------------------------
+class NodoABB{
+    constructor(_actor){
+        this.actor = _actor
+        this.izquierda = null
+        this.derecha = null
+    }
+}
+
+class ArbolABB{
+    constructor(){
+        this.raiz =  null
+        this.codigodot = ""
+        this.mostrar = ""
+    }
+    insertar(_actor){
+        this.raiz = this.Agregar(_actor,this.raiz)
+    }
+    Agregar(_actor,nodo){
+        if(nodo == null){
+            return new NodoABB(_actor)
+        }else{
+            if(_actor.dni < nodo.actor.dni){
+                nodo.izquierda = this.Agregar(_actor, nodo.izquierda)
+            }else if(_actor.dni > nodo.actor.dni){
+                nodo.derecha = this.Agregar(_actor, nodo.derecha)
+            }else{
+            }
+        }
+        return nodo
+    }
+    preordenG(){
+        this.pre_ordenG(this.raiz)
+    }
+    pre_ordenG(nodo){
+        if(nodo != null){
+            this.codigodot+= "\nnodo" + nodo.actor.dni + "[shape=circle,style=\"filled\",fillcolor=\"#0CA1EB\",fontcolor=\"white\" label=\"Nombre:" + nodo.actor.nombre + "\\nDNI:" + nodo.actor.dni+ "\"];"
+            if(nodo.izquierda != null){
+                this.codigodot += "\nnodo" + nodo.actor.dni + " -> nodo" + nodo.izquierda.actor.dni + "[headport=n];"
+            }
+            if(nodo.derecha != null){
+                this.codigodot += "\nnodo" + nodo.actor.dni + " -> nodo" + nodo.derecha.actor.dni + "[headport=n];"
+            }
+            this.pre_ordenG(nodo.izquierda)
+            this.pre_ordenG(nodo.derecha)
+        }
+    }
+    graficar(){
+        this.codigodot = "digraph G{\nsplines=false;"
+        this.preordenG()
+        this.codigodot+="\n}"
+        console.log(this.codigodot)
+        localStorage.setItem("dotactores", this.codigodot)
+    }
+    inorden(){
+        this.in_orden(this.raiz)
+    }
+    in_orden(nodo){
+        if(nodo!= null){
+            this.in_orden(nodo.izquierda)
+            console.log(nodo.actor.dni)
+            this.mostrar+=`
+        <li>
+            <span>
+            <span class="name_user">${nodo.actor.nombre}</span>
+            <span class="msg_user"><strong>Correo:</strong> ${nodo.actor.correo}</span><br><br>
+            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.actor.descripcion}</span>
+            <span class="time_ago">DNI: ${nodo.actor.dni}</span>
+            </span>
+        </li>`
+            this.in_orden(nodo.derecha)
+        }
+    }
+    postorden(){
+        this.post_orden(this.raiz)
+    }
+    post_orden(nodo){
+        if(nodo!= null){
+            this.post_orden(nodo.izquierda)
+            this.post_orden(nodo.derecha)
+            console.log(nodo.actor.dni)
+            this.mostrar+=`
+        <li>
+            <span>
+            <span class="name_user">${nodo.actor.nombre}</span>
+            <span class="msg_user"><strong>Correo:</strong> ${nodo.actor.correo}</span><br><br>
+            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.actor.descripcion}</span>
+            <span class="time_ago">DNI: ${nodo.actor.dni}</span>
+            </span>
+        </li>`
+        }
+    }
+    preorden(){
+        this.pre_orden(this.raiz)
+    }
+    pre_orden(nodo){
+        if(nodo!= null){
+            console.log(nodo.actor.dni)
+            this.mostrar+=`
+        <li>
+            <span>
+            <span class="name_user">${nodo.actor.nombre}</span>
+            <span class="msg_user"><strong>Correo:</strong> ${nodo.actor.correo}</span><br><br>
+            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.actor.descripcion}</span>
+            <span class="time_ago">DNI: ${nodo.actor.dni}</span>
+            </span>
+        </li>`
+            this.pre_orden(nodo.izquierda)
+            this.pre_orden(nodo.derecha)
+        }
+    }
+}
+
+class Actor{
+    constructor(_dni,_nombre,_correo,_descripcion){
+        this.dni = _dni
+        this.nombre = _nombre
+        this.correo = _correo
+        this.descripcion = _descripcion
+    }
+}
+
+
+//--------------------------------- CATEGORÍAS --------------------------------
+class NodoIdHash{
+    constructor(_id){
+        this.id = _id
+        this.categoria = null
+        this.siguiente = null
+        this.derecho = null
+    }
+}
+class NodoCategoria{
+    constructor(categoria){
+        this.categoria = categoria
+        this.derecho = null
+    }
+}
+
+class TablaHash{
+    constructor(){
+        this.tamanio = 0
+        this.cabeza = null
+        this.llenos = 0
+        this.mostrar = ""
+        this.llenadoinicial()
+    }
+    llenadoinicial(){
+        let contador = 0
+        while(contador != 20){
+            if(this.cabeza == null){
+                this.cabeza = new NodoIdHash(contador)
+                contador++
+            }else{
+                let temporal = this.cabeza
+                while(temporal != null){
+                    if(temporal.siguiente == null){
+                        break
+                    }
+                    temporal = temporal.siguiente
+                }
+                temporal.siguiente = new NodoIdHash(contador)
+                contador++
+            }
+            this.tamanio++
+        }
+    }
+    insertar(categoria){
+        let nuevo = new NodoCategoria(categoria)
+        let posicion = categoria.id%this.tamanio
+        let temporal = this.cabeza
+        let maximo = this.tamanio*0.75
+        console.log("LLENOS: " + this.llenos)
+        console.log("CAPACIDAD MAX: " + maximo)
+        if(this.llenos< maximo){
+            while(temporal!= null){
+                if(temporal.id == posicion){
+                    if(temporal.categoria == null){
+                        temporal.categoria = categoria
+                        break
+                    }else{
+                        if(temporal.derecho == null){
+                            temporal.derecho = nuevo
+                        }else{
+                            let tempo2 = temporal.derecho
+                            while(tempo2 != null){
+                                if(tempo2.categoria.id == nuevo.categoria.id){
+                                    break
+                                }
+                                if(tempo2.derecho == null){
+                                    break
+                                }
+                                tempo2 = tempo2.derecho
+                            }
+                            if(tempo2.categoria.id != nuevo.categoria.id){
+                                tempo2.derecho = nuevo
+                            }
+                        }
+                        break
+                    }
+                }
+                temporal = temporal.siguiente
+            }
+            this.llenos++
+        }else{
+            this.rehashing()
+            this.insertar(categoria)
+        }
+    }
+    rehashing(){
+        let contador = this.tamanio
+        let tope = this.tamanio+5
+        while(contador != tope){
+            let temporal = this.cabeza
+            while(temporal != null){
+                if(temporal.siguiente == null){
+                    break
+                }
+                temporal = temporal.siguiente
+            }
+            temporal.siguiente = new NodoIdHash(contador)
+            contador++
+        }
+        this.tamanio += 5
+    }
+    graficar(){
+        let codigodot = "digraph G {\nrankdir=LR;\n node [shape=record width = 2.2 fontsize=30];"
+        codigodot+= "\nides[style=\"filled\"  fillcolor=\"#3397EB\" label = \""
+        let nodos = ""
+        let temporal = this.cabeza
+        let conexiones = ""
+        while(temporal!= null){
+            if(temporal.siguiente != null){
+                if(temporal.categoria == null){
+                    codigodot+= "<id" + temporal.id +"> |"
+                    temporal = temporal.siguiente
+                }else{
+                    codigodot+= "<id" + temporal.id +">" + temporal.categoria.id+ "\\n" + temporal.categoria.company + " |"
+                    temporal = temporal.siguiente
+                }
+            }else{
+                if(temporal.categoria == null){
+                    codigodot+= "<id" + temporal.id +">"
+                    temporal = temporal.siguiente
+                }else{
+                    codigodot+= "<id" + temporal.id +">" + temporal.categoria.id+ "\\n" + temporal.categoria.company
+                    temporal = temporal.siguiente
+                }
+            }
+        }
+        codigodot+= "\" height=" + this.tamanio + "];\nnode [shape=box fontsize=30];\n"
+        let c = 0
+        while(c != this.tamanio){
+            codigodot+= "n" + c + "[shape=plain style=filled fillcolor=transparent fontsize=30 label=\"" + c + "\"];\n"
+            codigodot+= "n" + c + "->ides:id" + c + "[color=transparent];\n"
+            c++
+        }
+        temporal = this.cabeza
+        while(temporal != null){
+            if(temporal.derecho != null){
+                let tempo2 = temporal.derecho
+                while(tempo2 != null){
+                    nodos+= "i" + temporal.id + "_" + tempo2.categoria.id + "[style=\"filled\" fontcolor=\"white\"  fillcolor=\"#B373AB\" label=\"ID:" + tempo2.categoria.id +"\\nCompany:"+ tempo2.categoria.company+ "\"];\n"
+                    tempo2 = tempo2.derecho
+                }
+            }
+            temporal = temporal.siguiente
+        }
+        temporal = this.cabeza
+        while(temporal != null){
+            if(temporal.derecho!= null){
+                let tempo2 = temporal.derecho
+                conexiones+= "ides:id" + temporal.id + "->" +"i"+ temporal.id + "_" + tempo2.categoria.id + ";\n"
+                while(tempo2 != null){
+                    if(tempo2.derecho != null){
+                        conexiones+="i" +temporal.id + "_" + tempo2.categoria.id + "->" +"i" +temporal.id + "_" + tempo2.derecho.categoria.id + ";\n"
+                    }
+                    tempo2 = tempo2.derecho
+                }
+                
+            }
+            temporal = temporal.siguiente
+        }
+        codigodot += nodos + conexiones + "\n}"
+        console.log(codigodot)
+        localStorage.setItem("dothash",codigodot)
+    }
+    mostrarhtml(){
+        let temporal = this.cabeza
+        while(temporal != null){
+            if(temporal.categoria != null){
+                this.mostrar+=`
+                <div class="col-sm-6">
+                    <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-title">Categoria ID ${temporal.categoria.id}</h1>
+                        <h5 class="card-text">Company: ${temporal.categoria.company}</h5>
+                    </div>
+                    </div><br>
+                </div>`
+                if(temporal.derecho != null){
+                    let tempo2 = temporal.derecho
+                    while(tempo2!= null){
+                        this.mostrar+=`
+                <div class="col-sm-6">
+                    <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-title">Categoria ID ${temporal.categoria.id}</h1>
+                        <h5 class="card-text">Company: ${temporal.categoria.company}</h5>
+                    </div>
+                    </div>
+                </div><br>`
+                        tempo2 = tempo2.derecho
+                    }
+                }
+            }
+            temporal = temporal.siguiente
+        }
+    }
+}
+
+class Categoria{
+    constructor(_id,_company){
+        this.id = _id
+        this.company = _company
+    }
+}
+
+
+
+
 //------------------------------- VARIABLES GLOBALES --------------------------
 var actualUser = null;
 var Users = new listUsers();
 var Movies = new Arbol_AVL();
 
+
 //-----------------Admin Auxiliar---------------------------------------
 Users.addUser(2654568452521, "Oscar Armin", "EDD", "123", 1234567, true);
+
+
+
+//---------------------------------- LOGIN --------------------------------------
+document.getElementById('btn_login').onclick=function(){
+    console.log("Intento de Inicio de Sesión");
+    var user = document.getElementById('userLogin').value;
+    var password = document.getElementById('passwordLogin').value;
+    var usuarioEntrada = Users.findUserLogin(user,password);
+    if (usuarioEntrada != null){
+       if(document.getElementById('checkAdm').checked == true && usuarioEntrada.admin == true){
+            console.log("Intento de Inicio de Sesión Exitoso");
+            actualUser = usuarioEntrada;
+            alert("Ingreso como Administrador: " + usuarioEntrada.username);
+            //document.getElementById('NavBar1').style.display="none";
+            //document.getElementById('NavBar2').style.display="block";
+            //document.getElementById('NavBar3').style.display="none";
+            //document.getElementById('Index').style.display="none";
+            document.getElementById('Login').style.display="none";
+            //document.getElementById('Register').style.display="none";
+            document.getElementById('Admin').style.display="block";
+            //document.getElementById('User').style.display="none";
+
+            //console.log("Comprobación")
+            
+            //document.getElementById("NarBar3").style.display="none";
+            //document.getElementById("Administracion").style.display="block";
+        }else if(document.getElementById('checkAdm').checked == true && usuarioEntrada.admin == false){
+            alert("No posee permisos para ingresar como Administrador");
+            document.getElementById("userLogin").value="";
+            document.getElementById("passwordLogin").value="";
+            console.log("Intento de Inicio de Sesión como Administrador Fallido");
+       }else{
+            alert("Ingreso de Usuario: " + usuarioEntrada.username);
+            actualUser = usuarioEntrada;
+            //document.getElementById('NavBar1').style.display="none";
+            //document.getElementById('NavBar2').style.display="none";
+            //document.getElementById('NavBar3').style.display="block";
+            //document.getElementById('Index').style.display="none";
+            //document.getElementById('Login').style.display="none";
+            //document.getElementById('Register').style.display="none";
+            //document.getElementById('Admin').style.display="none";
+            //document.getElementById('User').style.display="block";
+            //document.getElementById('MusicUser').style.display="none";
+            //document.getElementById('PlaylistUser').style.display="none";
+            //document.getElementById('ArtistUser').style.display="none";
+            //document.getElementById('PodcastUser').style.display="none";
+            //document.getElementById('FriendsUser').style.display="none";
+            //document.getElementById('BlockUser').style.display="none";
+            //document.getElementById("Login").style.display="none";
+            //document.getElementById("Index").style.display="none";
+            //document.getElementById("Administracion").style.display="none";
+            //document.getElementById("PaginaUsuario").style.display="block";
+            document.getElementById('welcome').innerHTML = "Hola " + actualUser.name;
+            document.getElementById('bienvenida').style.display="block";
+       }
+    }else{
+        alert("Usuario o contraseña incorrectos");
+        console.log("Intento de Inicio de Sesión Fallido");
+    }
+    document.getElementById('userLogin').value = "";
+    document.getElementById('passwordLogin').value = "";
+    document.getElementById('checkAdm').checked = false;
+    //listaUsuarios.graficarUsuarios();
+}
+
 
 
 //------------------------------ ADMINISTRADOR ---------------------------------
