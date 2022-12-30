@@ -4,14 +4,14 @@ console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds())
 
 // --------------------------- USUARIOS --------------------------------
 class User{
-    constructor(dpi, name, username, password, phone, admin, id, passwordC){
+    constructor(dpi, nombre_completo, nombre_usuario, correo, contrasenia, telefono, id, admin){
         this.dpi = dpi;
-        this.name = name;
-        this.username = username;
-        this.password = password;
-        this.phone = phone;
+        this.name = nombre_completo;
+        this.username = nombre_usuario;
+        this.correo = correo;
+        this.password = contrasenia;
+        this.phone = telefono;
         this.admin = admin;
-        this.passwordC = passwordC;
         this.next = null;
         this.id = id;
     }
@@ -24,16 +24,11 @@ class listUsers{
         this.size = null;
     }
 
-    stringToHashConversion(string) {
-        for(var i = 0, hash = 0; i < string.length; i++)
-        hash = Math.imul(31, hash) + string.charCodeAt(i) | 0;
-        return hash;
-       }
 
-    addUser(dpi, name, username, password, phone, admin){
+
+    addUser(dpi, nombre_completo, nombre_usuario, correo, contrasenia, telefono, admin){
         this.size++;
-        let encript = this.stringToHashConversion(password);
-        var newUser = new User(dpi, name, username, password, phone, admin, this.size, encript);
+        var newUser = new User(dpi, nombre_completo, nombre_usuario, correo, contrasenia, telefono, this.size, admin);
         if(this.head == null){
             this.head = newUser;
             this.last = newUser;
@@ -110,27 +105,25 @@ class listUsers{
     }
  
 
-    //grafica(){
-    //    var graphUser = "digraph G { \n rankdir=\"LR\";\n";
-    //    var aux = this.head;
-    //    
-    //    for(let i = 0; i < this.size; i++){
-    //        graphUser += "user" + aux.id + "[label=\"" + aux.username + "\"];\n";
-    //        
-    //        aux = aux.next;
-    //    }
-    //    aux = this.head;
-    //    for(let i = 0; i < this.size - 1; i++){
-    //        if(aux.next != null){
-    //            graphUser += "user" + aux.id + "->" + "user" + (aux.id + 1) + ";\n";
-    //        }
-    //        aux = aux.next;
-    //    }
-//
-    //    graphUser += "}";
-    //    //console.log(graphUser);
-    //    return graphUser;
-    //}
+    grafica(){
+        var graphUser = "digraph G { \n rankdir=\"LR\";\n";
+        var aux = this.head;
+        
+        for(let i = 0; i < this.size; i++){
+            graphUser += "user" + aux.id + "[label=\"" + aux.username + "\"];\n";
+            aux = aux.next;
+        }
+        aux = this.head;
+        for(let i = 0; i < this.size - 1; i++){
+            if(aux.next != null){
+                graphUser += "user" + aux.id + "->" + "user" + (aux.id + 1) + ";\n";
+            }
+            aux = aux.next;
+        }
+
+        graphUser += "}";
+        return graphUser;
+    }
 }
 
 
@@ -169,7 +162,7 @@ class nodePelicula {
 
     graphPelicula(){
         return "digraph grafica{\n" +
-               'rankdir=TB;\n label="Arbol AVL";\nfontsize="50";\n'+
+               'rankdir=TB;\n\nfontsize="50";\n'+
                'node [ style=filled , fillcolor=darkgoldenrod2];\n'+
                 this.graphPeliculaNode()+
                 "}\n";
@@ -280,16 +273,16 @@ class Arbol_AVL{
     graficar(){
         var actual;
         actual = this.raiz;
-        var hola = actual.obtenerGraphviz();
-        console.log(hola);
-        d3.select("#Arbol_AVL").graphviz()
-            .zoom(false)
-            .renderDot(hola)
-
+        var graph = actual.graphPelicula();
+        console.log(graph);
+        
+        
+        return graph;
+ 
     }
 
     inorden(){
-        var res =document.querySelector("#tablaPeliculas");
+        var res = document.querySelector("#tablaPeliculas");
         res.innerHTML = "";
         this.inordenAux(this.raiz,res);
     }
@@ -334,9 +327,12 @@ class Arbol_AVL{
 }
 
 //---------------------------------- ACTORES ----------------------------------
-class NodoABB{
-    constructor(_actor){
-        this.actor = _actor
+class NodoActor{
+    constructor(dni,nombre,correo,descripcion){
+        this.dni = dni
+        this.nombre = nombre
+        this.correo = correo
+        this.descripcion = descripcion
         this.izquierda = null
         this.derecha = null
     }
@@ -348,64 +344,71 @@ class ArbolABB{
         this.codigodot = ""
         this.mostrar = ""
     }
-    insertar(_actor){
-        this.raiz = this.Agregar(_actor,this.raiz)
+
+    insertar(dni,nombre,correo,descripcion){
+        this.raiz = this.Agregar(dni,nombre,correo,descripcion,this.raiz)
     }
-    Agregar(_actor,nodo){
+
+    Agregar(dni,nombre,correo,descripcion,nodo){
         if(nodo == null){
-            return new NodoABB(_actor)
+            return new NodoActor(dni,nombre,correo,descripcion)
         }else{
-            if(_actor.dni < nodo.actor.dni){
-                nodo.izquierda = this.Agregar(_actor, nodo.izquierda)
-            }else if(_actor.dni > nodo.actor.dni){
-                nodo.derecha = this.Agregar(_actor, nodo.derecha)
+            if(dni < nodo.dni){
+                nodo.izquierda = this.Agregar(dni,nombre,correo,descripcion, nodo.izquierda)
+            }else if(dni > nodo.dni){
+                nodo.derecha = this.Agregar(dni,nombre,correo,descripcion, nodo.derecha)
             }else{
             }
         }
         return nodo
     }
+
     preordenG(){
         this.pre_ordenG(this.raiz)
     }
+
     pre_ordenG(nodo){
         if(nodo != null){
-            this.codigodot+= "\nnodo" + nodo.actor.dni + "[shape=circle,style=\"filled\",fillcolor=\"#0CA1EB\",fontcolor=\"white\" label=\"Nombre:" + nodo.actor.nombre + "\\nDNI:" + nodo.actor.dni+ "\"];"
+            this.codigodot+= "\nnodo" + nodo.dni + "[shape=circle,style=\"filled\",fillcolor=\"#0CA1EB\",fontcolor=\"white\" label=\"Nombre:" + nodo.nombre + "\\nDNI:" + nodo.dni+ "\"];"
             if(nodo.izquierda != null){
-                this.codigodot += "\nnodo" + nodo.actor.dni + " -> nodo" + nodo.izquierda.actor.dni + "[headport=n];"
+                this.codigodot += "\nnodo" + nodo.dni + " -> nodo" + nodo.izquierda.dni + "[headport=n];"
             }
             if(nodo.derecha != null){
-                this.codigodot += "\nnodo" + nodo.actor.dni + " -> nodo" + nodo.derecha.actor.dni + "[headport=n];"
+                this.codigodot += "\nnodo" + nodo.dni + " -> nodo" + nodo.derecha.dni + "[headport=n];"
             }
             this.pre_ordenG(nodo.izquierda)
             this.pre_ordenG(nodo.derecha)
         }
     }
+
     graficar(){
         this.codigodot = "digraph G{\nsplines=false;"
         this.preordenG()
         this.codigodot+="\n}"
         console.log(this.codigodot)
-        localStorage.setItem("dotactores", this.codigodot)
     }
+
     inorden(){
         this.in_orden(this.raiz)
     }
+
     in_orden(nodo){
         if(nodo!= null){
             this.in_orden(nodo.izquierda)
-            console.log(nodo.actor.dni)
+            console.log(nodo.dni)
             this.mostrar+=`
         <li>
             <span>
-            <span class="name_user">${nodo.actor.nombre}</span>
-            <span class="msg_user"><strong>Correo:</strong> ${nodo.actor.correo}</span><br><br>
-            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.actor.descripcion}</span>
-            <span class="time_ago">DNI: ${nodo.actor.dni}</span>
+            <span class="name_user">${nodo.nombre}</span>
+            <span class="msg_user"><strong>Correo:</strong> ${nodo.correo}</span><br><br>
+            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.descripcion}</span>
+            <span class="time_ago">DNI: ${nodo.dni}</span>
             </span>
         </li>`
             this.in_orden(nodo.derecha)
         }
     }
+
     postorden(){
         this.post_orden(this.raiz)
     }
@@ -413,31 +416,33 @@ class ArbolABB{
         if(nodo!= null){
             this.post_orden(nodo.izquierda)
             this.post_orden(nodo.derecha)
-            console.log(nodo.actor.dni)
+            console.log(nodo.dni)
             this.mostrar+=`
         <li>
             <span>
-            <span class="name_user">${nodo.actor.nombre}</span>
-            <span class="msg_user"><strong>Correo:</strong> ${nodo.actor.correo}</span><br><br>
-            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.actor.descripcion}</span>
-            <span class="time_ago">DNI: ${nodo.actor.dni}</span>
+            <span class="name_user">${nodo.nombre}</span>
+            <span class="msg_user"><strong>Correo:</strong> ${nodo.correo}</span><br><br>
+            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.descripcion}</span>
+            <span class="time_ago">DNI: ${nodo.dni}</span>
             </span>
         </li>`
         }
     }
+
     preorden(){
         this.pre_orden(this.raiz)
     }
+
     pre_orden(nodo){
         if(nodo!= null){
-            console.log(nodo.actor.dni)
+            console.log(nodo.dni)
             this.mostrar+=`
         <li>
             <span>
-            <span class="name_user">${nodo.actor.nombre}</span>
-            <span class="msg_user"><strong>Correo:</strong> ${nodo.actor.correo}</span><br><br>
-            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.actor.descripcion}</span>
-            <span class="time_ago">DNI: ${nodo.actor.dni}</span>
+            <span class="name_user">${nodo.nombre}</span>
+            <span class="msg_user"><strong>Correo:</strong> ${nodo.correo}</span><br><br>
+            <span class="msg_user"><strong><strong>Descripción: </strong></strong>${nodo.descripcion}</span>
+            <span class="time_ago">DNI: ${nodo.dni}</span>
             </span>
         </li>`
             this.pre_orden(nodo.izquierda)
@@ -445,16 +450,6 @@ class ArbolABB{
         }
     }
 }
-
-class Actor{
-    constructor(_dni,_nombre,_correo,_descripcion){
-        this.dni = _dni
-        this.nombre = _nombre
-        this.correo = _correo
-        this.descripcion = _descripcion
-    }
-}
-
 
 //--------------------------------- CATEGORÍAS --------------------------------
 class NodoIdHash{
@@ -480,6 +475,7 @@ class TablaHash{
         this.mostrar = ""
         this.llenadoinicial()
     }
+
     llenadoinicial(){
         let contador = 0
         while(contador != 20){
@@ -500,6 +496,7 @@ class TablaHash{
             this.tamanio++
         }
     }
+    
     insertar(categoria){
         let nuevo = new NodoCategoria(categoria)
         let posicion = categoria.id%this.tamanio
@@ -542,6 +539,7 @@ class TablaHash{
             this.insertar(categoria)
         }
     }
+    
     rehashing(){
         let contador = this.tamanio
         let tope = this.tamanio+5
@@ -618,8 +616,10 @@ class TablaHash{
         }
         codigodot += nodos + conexiones + "\n}"
         console.log(codigodot)
-        localStorage.setItem("dothash",codigodot)
+        return codigodot;
+
     }
+
     mostrarhtml(){
         let temporal = this.cabeza
         while(temporal != null){
@@ -668,10 +668,12 @@ class Categoria{
 var actualUser = null;
 var Users = new listUsers();
 var Movies = new Arbol_AVL();
+var Actores = new ArbolABB();
+var Categorias = new TablaHash();
 
 
 //-----------------Admin Auxiliar---------------------------------------
-Users.addUser(2654568452521, "Oscar Armin", "EDD", "123", 1234567, true);
+Users.addUser(2654568452521, "Oscar Armin", "EDD","admin@gmail.com" ,"123", 12345678, true);
 
 
 
@@ -760,9 +762,9 @@ function leerArchivoUsuario(e) {
 function loadUsers(content){
     var datos = JSON.parse(content);
     for (var i = 0; i < datos.length; i++) {
-       Users.addUser(datos[i].dpi,datos[i].name,datos[i].username,datos[i].password,datos[i].phone,datos[i].admin);
+       Users.addUser(datos[i].dpi, datos[i].nombre_completo, datos[i].nombre_usuario, datos[i].password, datos[i].correo, datos[i].contrasenia, datos[i].telefono, false);
     }
-   // listaUsuarios.graficarUsuarios();
+
    Users.printUsers();
    console.log("Total de Usuarios cargados: " + Users.size);
     alert("Usuarios cargados"); 
@@ -786,12 +788,115 @@ function leerArchivoPelicula(e) {
 }
 
 function loadPelicula(content){
-    var datos = JSON.parse(contenido);
+    var datos = JSON.parse(content);
     for (var i = 0; i < datos.length; i++) {
         Movies.insertar(datos[i].id_pelicula,datos[i].nombre_pelicula,datos[i].descripcion,datos[i].puntuacion_star,datos[i].precio_Q,datos[i].paginas, datos[i].categoria);
     }
     alert("Peliculas cargadas");
-    Movies.graficar();
-    Movies.inorden();
-     alert("Películas cargadas"); 
+    //Movies.graficar();
+    //Movies.inorden();
+}
+
+// ---- Carga Masiva Actores
+document.getElementById('masivaActores').addEventListener('change', leerArchivoActores, false);
+function leerArchivoActores(e) {
+    var archivo = e.target.files[0];
+    if (!archivo) {
+      return;
+    }
+    var lector = new FileReader();
+    lector.onload = function(e) {
+        var contenido = e.target.result;
+        loadActores(contenido);
+    };
+    lector.readAsText(archivo);
+}
+
+function loadActores(content){
+    var datos = JSON.parse(content);
+    for (var i = 0; i < datos.length; i++) {
+        Actores.insertar(datos[i].dni, datos[i].nombre_actor, datos[i].correo, datos[i].descripcion);
+    }
+    alert("Actores cargados");
+}
+
+// ---- Carga Masiva Categorías
+document.getElementById('masivaCategorias').addEventListener('change', leerArchivoCategorias, false);
+function leerArchivoCategorias(e) {
+    var archivo = e.target.files[0];
+    if (!archivo) {
+      return;
+    }
+    var lector = new FileReader();
+    lector.onload = function(e) {
+        var contenido = e.target.result;
+        loadCategorias(contenido);
+    };
+    lector.readAsText(archivo);
+}
+
+function loadCategorias(content){
+    var datos = JSON.parse(content);
+    for (var i = 0; i < datos.length; i++) {
+        var newCategoria = new Categoria(datos[i].id, datos[i].company);
+        Categorias.insertar(newCategoria);
+
+    }
+    alert("Categorías cargadas");
+}
+
+
+
+//------------------- Gráficas Admin ------------------
+document.getElementById('btn_UsuariosAdmin').onclick=function(){
+    var grph = Users.grafica();
+    d3.select("#UsuariosAdmin").graphviz()
+    .width(2000)
+    .height(1050)
+    .renderDot(grph)
+
+    document.getElementById('UsuariosAdmin').style.display="block";
+    document.getElementById('PeliculasAdmin').style.display="none";
+    document.getElementById('ActoresAdmin').style.display="none";
+    document.getElementById('CategoriasAdmin').style.display="none";
+}
+
+document.getElementById('btn_PeliculasAdmin').onclick=function(){
+    var grph = Movies.graficar();
+    d3.select("#PeliculasAdmin").graphviz()
+    .width(2000)
+    .height(1050)
+    .renderDot(grph)
+
+    document.getElementById('UsuariosAdmin').style.display="none";
+    document.getElementById('PeliculasAdmin').style.display="block";
+    document.getElementById('ActoresAdmin').style.display="none";
+    document.getElementById('CategoriasAdmin').style.display="none";
+}
+
+document.getElementById('btn_ActoresAdmin').onclick=function(){
+    Actores.graficar();
+    var grph = Actores.codigodot;
+    d3.select("#ActoresAdmin").graphviz()
+    .width(2000)
+    .height(1050)
+    .renderDot(grph)
+
+    document.getElementById('UsuariosAdmin').style.display="none";
+    document.getElementById('PeliculasAdmin').style.display="none";
+    document.getElementById('ActoresAdmin').style.display="block";
+    document.getElementById('CategoriasAdmin').style.display="none";
+}
+
+document.getElementById('btn_CategoriasAdmin').onclick=function(){
+    var grph = Categorias.graficar();
+    d3.select("#CategoriasAdmin").graphviz()
+    .width(2000)
+    .height(1050)
+    .renderDot(grph)
+
+    document.getElementById('UsuariosAdmin').style.display="none";
+    document.getElementById('PeliculasAdmin').style.display="none";
+    document.getElementById('CategoriasAdmin').style.display="block";
+    document.getElementById('ActoresAdmin').style.display="none";
 }
