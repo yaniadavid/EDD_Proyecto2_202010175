@@ -504,19 +504,23 @@ class TablaHash{
         let maximo = this.tamanio*0.75
         console.log("LLENOS: " + this.llenos)
         console.log("CAPACIDAD MAX: " + maximo)
+        console.log(categoria)
         if(this.llenos< maximo){
             while(temporal!= null){
                 if(temporal.id == posicion){
                     if(temporal.categoria == null){
                         temporal.categoria = categoria
+                        console.log(categoria)
                         break
                     }else{
                         if(temporal.derecho == null){
                             temporal.derecho = nuevo
+                            console.log(categoria)
                         }else{
                             let tempo2 = temporal.derecho
                             while(tempo2 != null){
                                 if(tempo2.categoria.id == nuevo.categoria.id){
+
                                     break
                                 }
                                 if(tempo2.derecho == null){
@@ -525,6 +529,7 @@ class TablaHash{
                                 tempo2 = tempo2.derecho
                             }
                             if(tempo2.categoria.id != nuevo.categoria.id){
+                                console.log(categoria)
                                 tempo2.derecho = nuevo
                             }
                         }
@@ -838,7 +843,7 @@ function leerArchivoCategorias(e) {
 function loadCategorias(content){
     var datos = JSON.parse(content);
     for (var i = 0; i < datos.length; i++) {
-        var newCategoria = new Categoria(datos[i].id, datos[i].company);
+        var newCategoria = new Categoria(datos[i].id_categoria, datos[i].company);
         Categorias.insertar(newCategoria);
 
     }
@@ -850,7 +855,7 @@ function loadCategorias(content){
 //------------------- Gráficas Admin ------------------
 document.getElementById('btn_UsuariosAdmin').onclick=function(){
     var grph = Users.grafica();
-    d3.select("#UsuariosAdmin").graphviz()
+    d3.select("#graphUserAdmin").graphviz()
     .width(2000)
     .height(1050)
     .renderDot(grph)
@@ -863,7 +868,7 @@ document.getElementById('btn_UsuariosAdmin').onclick=function(){
 
 document.getElementById('btn_PeliculasAdmin').onclick=function(){
     var grph = Movies.graficar();
-    d3.select("#PeliculasAdmin").graphviz()
+    d3.select("#graphPeliculaAdmin").graphviz()
     .width(2000)
     .height(1050)
     .renderDot(grph)
@@ -877,7 +882,7 @@ document.getElementById('btn_PeliculasAdmin').onclick=function(){
 document.getElementById('btn_ActoresAdmin').onclick=function(){
     Actores.graficar();
     var grph = Actores.codigodot;
-    d3.select("#ActoresAdmin").graphviz()
+    d3.select("#graphActorAdmin").graphviz()
     .width(2000)
     .height(1050)
     .renderDot(grph)
@@ -890,7 +895,7 @@ document.getElementById('btn_ActoresAdmin').onclick=function(){
 
 document.getElementById('btn_CategoriasAdmin').onclick=function(){
     var grph = Categorias.graficar();
-    d3.select("#CategoriasAdmin").graphviz()
+    d3.select("#graphCategoriaAdmin").graphviz()
     .width(2000)
     .height(1050)
     .renderDot(grph)
@@ -899,4 +904,50 @@ document.getElementById('btn_CategoriasAdmin').onclick=function(){
     document.getElementById('PeliculasAdmin').style.display="none";
     document.getElementById('CategoriasAdmin').style.display="block";
     document.getElementById('ActoresAdmin').style.display="none";
+}
+
+
+
+document.getElementById("btn_graphUser").onclick=function(){
+    html2canvas(document.querySelector("#graphUserAdmin")).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        var anchor = document.createElement('a');
+        anchor.setAttribute('href', imgData);
+        anchor.setAttribute('download', 'Users_ListaSimple.png');
+        anchor.click();
+        anchor.remove();
+    });
+}
+
+document.getElementById("btn_graphPelicula").onclick=function(){
+    html2canvas(document.querySelector("#graphPeliculaAdmin")).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        var anchor = document.createElement('a');
+        anchor.setAttribute('href', imgData);
+        anchor.setAttribute('download', 'Pelicula_AVL.png');
+        anchor.click();
+        anchor.remove();
+    });
+}
+
+document.getElementById("btn_graphActor").onclick=function(){
+    html2canvas(document.querySelector("#graphActorAdmin")).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        var anchor = document.createElement('a');
+        anchor.setAttribute('href', imgData);
+        anchor.setAttribute('download', 'Actor_ABB.png');
+        anchor.click();
+        anchor.remove();
+    });
+}
+
+document.getElementById("btn_graphCategoria").onclick=function(){
+    html2canvas(document.querySelector("#graphCategoriaAdmin")).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        var anchor = document.createElement('a');
+        anchor.setAttribute('href', imgData);
+        anchor.setAttribute('download', 'Categoria_TH.png');
+        anchor.click();
+        anchor.remove();
+    });
 }
