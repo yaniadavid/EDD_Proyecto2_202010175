@@ -332,7 +332,7 @@ class nodePelicula {
     graphPelicula(){
         return "digraph grafica{\n" +
                'rankdir=TB;\n\nfontsize="50";\n'+
-               'node [ style=filled , fillcolor=darkgoldenrod2];\n'+
+               'node [ style=filled ];\n'+
                 this.graphPeliculaNode()+
                 "}\n";
     }
@@ -561,7 +561,7 @@ class ArbolABB{
 
     pre_ordenG(nodo){
         if(nodo != null){
-            this.codigodot+= "\nnodo" + nodo.dni + "[shape=circle,style=\"filled\",fillcolor=\"#0CA1EB\",fontcolor=\"white\" label=\"Nombre:" + nodo.nombre + "\\nDNI:" + nodo.dni+ "\"];"
+            this.codigodot+= "\nnodo" + nodo.dni + "[shape=circle,style=\"filled\", label=\"Nombre:" + nodo.nombre + "\\nDNI:" + nodo.dni+ "\"];"
             if(nodo.izquierda != null){
                 this.codigodot += "\nnodo" + nodo.dni + " -> nodo" + nodo.izquierda.dni + "[headport=n];"
             }
@@ -1118,6 +1118,7 @@ document.getElementById('btn_login').onclick=function(){
             console.log("Intento de Inicio de Sesión Exitoso");
             actualUser = usuarioEntrada;
             alert("Ingreso como Administrador: " + usuarioEntrada.username);
+            document.getElementById('NavBar1').style.display="none";
             document.getElementById('NavBarUser').style.display="none";
             document.getElementById('NavBarAdmin').style.display="block";
             document.getElementById('Login').style.display="none";
@@ -1131,6 +1132,7 @@ document.getElementById('btn_login').onclick=function(){
        }else{
             alert("Ingreso de Usuario: " + usuarioEntrada.username);
             actualUser = usuarioEntrada;
+            document.getElementById('NavBar1').style.display="none";
             document.getElementById('NavBarUser').style.display="block";
             document.getElementById('NavBarAdmin').style.display="none";
             document.getElementById('Login').style.display="none";
@@ -1156,6 +1158,7 @@ document.getElementById('btn_login').onclick=function(){
 
 document.getElementById('deslogin').onclick=function(){
     actualUser = null;
+    document.getElementById('NavBar1').style.display="block";
     document.getElementById('Login').style.display="block";
     document.getElementById('Admin').style.display="none";
     document.getElementById('User').style.display="none";
@@ -1167,6 +1170,7 @@ document.getElementById('deslogin').onclick=function(){
 
 document.getElementById('desloginUser').onclick=function(){
     actualUser = null;
+    document.getElementById('NavBar1').style.display="block";
     document.getElementById('Login').style.display="block";
     document.getElementById('Admin').style.display="none";
     document.getElementById('User').style.display="none";
