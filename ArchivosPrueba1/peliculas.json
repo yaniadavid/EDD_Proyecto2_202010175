@@ -1,0 +1,452 @@
+[
+  {
+    "id_pelicula": 312206,
+    "nombre_pelicula": "Bobbie Mcknight",
+    "paginas": 641,
+    "descripcion": "Tempor ea in officia laboris nostrud mollit culpa. Commodo amet est deserunt exercitation voluptate elit adipisicing cupidatat irure irure. Veniam sit consectetur in amet quis officia duis reprehenderit. Dolore occaecat quis amet elit enim cillum irure nulla anim officia elit proident cillum eu. Nisi aliquip pariatur sit esse. Magna enim enim occaecat duis non non consectetur ipsum nisi sint labore voluptate reprehenderit minim. Consectetur laborum excepteur duis in velit nostrud.\r\n",
+    "precion_Q": 200.9305,
+    "puntuacion_star": 4,
+    "categoria": "ex"
+  },
+  {
+    "id_pelicula": 1750900,
+    "nombre_pelicula": "Richardson Pena",
+    "paginas": 477,
+    "descripcion": "Occaecat irure irure nulla aute consequat officia elit. Enim anim reprehenderit nostrud commodo mollit deserunt voluptate aliqua nisi. Ut ex tempor exercitation minim. In sint ex amet sunt elit anim commodo veniam. Enim pariatur dolore duis cupidatat laborum nulla incididunt ea aliquip commodo aliquip exercitation elit. Enim elit laboris dolor labore incididunt nostrud mollit voluptate dolor.\r\n",
+    "precion_Q": 4.0052,
+    "puntuacion_star": 5,
+    "categoria": "cillum"
+  },
+  {
+    "id_pelicula": 5251927,
+    "nombre_pelicula": "Mendez Becker",
+    "paginas": 455,
+    "descripcion": "Officia eiusmod velit nulla enim ex Lorem labore aliquip veniam ea do occaecat. Pariatur occaecat nulla elit do adipisicing amet culpa nisi magna laborum et eiusmod do duis. Ex aliqua aliquip velit ea eiusmod laboris proident. Sunt veniam exercitation consectetur anim labore amet ipsum qui labore dolor cupidatat nulla cillum. Proident anim occaecat excepteur aliquip cupidatat laborum dolore voluptate amet elit ipsum exercitation culpa. Reprehenderit dolore consectetur ad ut commodo dolore amet cillum minim ad id magna aute. Adipisicing laborum cupidatat sint occaecat pariatur officia consequat ut mollit adipisicing dolor dolor do.\r\n",
+    "precion_Q": 6.1639,
+    "puntuacion_star": 1,
+    "categoria": "quis"
+  },
+  {
+    "id_pelicula": 194144,
+    "nombre_pelicula": "Flowers Ballard",
+    "paginas": 119,
+    "descripcion": "Laboris eu officia commodo duis proident eu dolor aliquip ut ipsum commodo proident. Aliquip duis aliqua aliqua pariatur quis labore aute. Minim cupidatat fugiat qui elit duis. Excepteur anim excepteur elit ullamco duis consequat non.\r\n",
+    "precion_Q": 284.7104,
+    "puntuacion_star": 5,
+    "categoria": "pariatur"
+  },
+  {
+    "id_pelicula": 4101274,
+    "nombre_pelicula": "Jaime Castillo",
+    "paginas": 687,
+    "descripcion": "Ut id commodo laborum minim culpa enim mollit. Ad nostrud nisi nulla fugiat occaecat velit incididunt ex id quis adipisicing aute. Esse voluptate consectetur magna tempor nostrud amet Lorem. Veniam aute minim enim elit do enim laboris non ipsum. In commodo culpa sunt dolor. Duis est id culpa esse quis pariatur tempor culpa sint id elit aliquip. Ad ullamco sunt mollit tempor laboris magna amet veniam occaecat cupidatat.\r\n",
+    "precion_Q": 79.9704,
+    "puntuacion_star": 1,
+    "categoria": "occaecat"
+  },
+  {
+    "id_pelicula": 294638,
+    "nombre_pelicula": "Franks Carney",
+    "paginas": 169,
+    "descripcion": "Laborum cupidatat nulla nostrud excepteur sint nostrud mollit laborum eu nisi et nulla dolor. Sint do fugiat laboris nostrud in ad culpa aliquip in. Ullamco esse elit consectetur velit eu mollit dolore aliquip incididunt. Est sunt irure consequat commodo incididunt tempor eu et deserunt est dolore cillum pariatur. Amet excepteur consequat commodo tempor id aliqua pariatur consectetur enim sint sint incididunt.\r\n",
+    "precion_Q": 201.5091,
+    "puntuacion_star": 5,
+    "categoria": "ad"
+  },
+  {
+    "id_pelicula": 5710354,
+    "nombre_pelicula": "Kris Bernard",
+    "paginas": 514,
+    "descripcion": "Exercitation ea laboris fugiat ad velit. Ullamco anim dolore aliqua nostrud qui. Anim dolor irure est deserunt est consequat pariatur ex. Deserunt consequat ea fugiat sunt anim sunt pariatur. Fugiat ut aliquip labore culpa enim sit reprehenderit. Sint tempor Lorem esse aliquip nulla deserunt sunt.\r\n",
+    "precion_Q": 746.5322,
+    "puntuacion_star": 5,
+    "categoria": "in"
+  },
+  {
+    "id_pelicula": 6735565,
+    "nombre_pelicula": "Tate Alvarado",
+    "paginas": 265,
+    "descripcion": "Laborum magna occaecat ullamco esse laboris esse irure adipisicing anim culpa aliquip commodo nulla enim. Sunt excepteur dolore pariatur qui duis voluptate irure anim duis officia quis incididunt amet. Non laboris consequat nisi proident esse sint ullamco magna labore Lorem velit. Dolore pariatur et mollit labore esse.\r\n",
+    "precion_Q": 261.3535,
+    "puntuacion_star": 4,
+    "categoria": "enim"
+  },
+  {
+    "id_pelicula": 9563229,
+    "nombre_pelicula": "Eunice Rosa",
+    "paginas": 622,
+    "descripcion": "Est incididunt pariatur eu minim enim exercitation. Tempor deserunt qui in voluptate mollit eiusmod eu incididunt laboris. Ad quis consectetur proident laborum quis mollit cupidatat nostrud laborum non est irure. Aliquip ad adipisicing do proident fugiat nisi.\r\n",
+    "precion_Q": 115.4394,
+    "puntuacion_star": 2,
+    "categoria": "consectetur"
+  },
+  {
+    "id_pelicula": 4631527,
+    "nombre_pelicula": "Mia Calderon",
+    "paginas": 652,
+    "descripcion": "Amet velit enim ut sunt reprehenderit elit velit officia culpa amet excepteur sunt id. Nostrud in ex mollit sit aute qui mollit irure ipsum est. Voluptate amet quis anim ea fugiat magna adipisicing duis enim do elit proident laborum nostrud. Commodo velit Lorem labore sit velit enim.\r\n",
+    "precion_Q": 762.4194,
+    "puntuacion_star": 1,
+    "categoria": "mollit"
+  },
+  {
+    "id_pelicula": 9194131,
+    "nombre_pelicula": "Reynolds Daniel",
+    "paginas": 485,
+    "descripcion": "Quis non dolore occaecat esse consectetur irure aliquip voluptate qui incididunt. Dolor non anim qui in aliquip eiusmod anim esse reprehenderit irure aliqua eiusmod culpa culpa. Laborum exercitation laboris aliquip nulla. Magna enim pariatur esse minim ut aliqua ut amet nisi nulla laborum consequat. Laborum tempor occaecat labore consectetur in ullamco ad eu nulla adipisicing minim officia officia amet. Dolore magna magna non labore culpa fugiat. Irure aliqua minim fugiat nostrud veniam do cupidatat ea pariatur.\r\n",
+    "precion_Q": 268.4125,
+    "puntuacion_star": 2,
+    "categoria": "ipsum"
+  },
+  {
+    "id_pelicula": 3970026,
+    "nombre_pelicula": "Ronda Mills",
+    "paginas": 967,
+    "descripcion": "Quis incididunt et magna veniam esse et pariatur ullamco cupidatat. Nostrud consequat exercitation consectetur ad ullamco eu nulla. Sunt proident laboris eiusmod ex Lorem pariatur qui. Laborum do veniam ad qui cupidatat ad commodo adipisicing enim magna reprehenderit enim veniam esse. Amet ex adipisicing irure minim enim officia aliquip ex exercitation exercitation qui ex cupidatat dolore.\r\n",
+    "precion_Q": 189.3178,
+    "puntuacion_star": 3,
+    "categoria": "ad"
+  },
+  {
+    "id_pelicula": 9774187,
+    "nombre_pelicula": "Luann Wyatt",
+    "paginas": 745,
+    "descripcion": "Non culpa dolore laboris et eiusmod reprehenderit occaecat ut irure velit Lorem officia sunt. Minim exercitation est culpa ad. Excepteur consectetur eu ullamco irure cillum.\r\n",
+    "precion_Q": 414.3551,
+    "puntuacion_star": 2,
+    "categoria": "occaecat"
+  },
+  {
+    "id_pelicula": 694036,
+    "nombre_pelicula": "Atkinson Riddle",
+    "paginas": 735,
+    "descripcion": "In magna nisi incididunt labore ex deserunt sint deserunt laborum. Lorem excepteur tempor minim irure voluptate. Eiusmod deserunt nostrud reprehenderit et cupidatat. Et velit cillum veniam amet. Pariatur velit ea voluptate pariatur irure in enim in adipisicing excepteur. Nulla dolor eu anim aliquip cupidatat.\r\n",
+    "precion_Q": 417.9398,
+    "puntuacion_star": 5,
+    "categoria": "magna"
+  },
+  {
+    "id_pelicula": 529434,
+    "nombre_pelicula": "Mccoy Garrett",
+    "paginas": 691,
+    "descripcion": "Dolor eiusmod reprehenderit qui fugiat ipsum. Ut consectetur fugiat nisi aute deserunt aliquip laboris excepteur. Minim voluptate cillum magna sit incididunt quis occaecat tempor dolor do cupidatat. Quis ex laboris reprehenderit voluptate ex consequat culpa adipisicing mollit cupidatat. Quis mollit labore esse ea cupidatat laborum elit voluptate magna consectetur fugiat.\r\n",
+    "precion_Q": 570.9734,
+    "puntuacion_star": 1,
+    "categoria": "deserunt"
+  },
+  {
+    "id_pelicula": 322907,
+    "nombre_pelicula": "Meghan Church",
+    "paginas": 181,
+    "descripcion": "Voluptate qui officia aute do in cupidatat elit anim eu. Exercitation incididunt in id laboris non nulla qui ex incididunt irure reprehenderit officia et culpa. Adipisicing aliqua in ut consequat commodo proident consectetur do incididunt pariatur. Aliquip duis aliquip dolore pariatur nulla commodo sunt id est Lorem commodo. Proident est ad laborum duis irure magna anim minim eiusmod. Fugiat qui nulla commodo aliquip mollit eiusmod esse anim id.\r\n",
+    "precion_Q": 344.484,
+    "puntuacion_star": 3,
+    "categoria": "id"
+  },
+  {
+    "id_pelicula": 8936078,
+    "nombre_pelicula": "Bethany Alvarez",
+    "paginas": 165,
+    "descripcion": "Cillum eiusmod ipsum occaecat adipisicing dolore cillum laboris ullamco velit nisi nisi quis est. Non aliquip aliquip mollit reprehenderit excepteur proident reprehenderit laborum quis quis elit Lorem sit. Fugiat culpa eu dolore velit ea labore in dolore labore velit incididunt Lorem. Labore commodo voluptate mollit nisi deserunt Lorem dolore. Tempor ut occaecat enim ut velit laborum exercitation incididunt fugiat dolore irure.\r\n",
+    "precion_Q": 75.9484,
+    "puntuacion_star": 4,
+    "categoria": "reprehenderit"
+  },
+  {
+    "id_pelicula": 8544375,
+    "nombre_pelicula": "Sybil Jacobs",
+    "paginas": 193,
+    "descripcion": "Culpa exercitation aute mollit duis tempor ut esse. Fugiat ea dolor veniam irure occaecat consectetur nisi laboris fugiat. Velit mollit laborum esse ipsum commodo sint aliqua magna ex reprehenderit.\r\n",
+    "precion_Q": 64.0197,
+    "puntuacion_star": 4,
+    "categoria": "est"
+  },
+  {
+    "id_pelicula": 7239384,
+    "nombre_pelicula": "Delacruz Rosales",
+    "paginas": 350,
+    "descripcion": "Sunt laborum exercitation quis consequat. Sunt elit ad voluptate aliquip exercitation excepteur deserunt elit quis aute proident eiusmod duis dolor. Lorem nostrud dolore commodo esse id laboris ex ut Lorem. Ad sunt commodo aute nostrud laboris qui excepteur duis consequat. Do nisi eiusmod deserunt enim ea exercitation dolore.\r\n",
+    "precion_Q": 219.0422,
+    "puntuacion_star": 4,
+    "categoria": "aliqua"
+  },
+  {
+    "id_pelicula": 4853213,
+    "nombre_pelicula": "Janie Estrada",
+    "paginas": 935,
+    "descripcion": "Proident sit anim elit aute. Ut nulla deserunt officia consectetur eiusmod anim laborum labore consectetur. Voluptate deserunt consequat ex commodo eu ex tempor consequat commodo sint. Ea qui eiusmod aliquip aliquip ad. Laboris anim dolore velit ex voluptate.\r\n",
+    "precion_Q": 509.181,
+    "puntuacion_star": 4,
+    "categoria": "fugiat"
+  },
+  {
+    "id_pelicula": 4319527,
+    "nombre_pelicula": "Solis Serrano",
+    "paginas": 667,
+    "descripcion": "Voluptate tempor dolore cillum fugiat laborum ea tempor adipisicing laboris duis sint exercitation. Culpa enim ad minim laboris laborum do nulla laboris. Anim adipisicing anim dolore sunt dolor consectetur. Aliqua proident culpa pariatur laboris. Aute cupidatat qui ea ea.\r\n",
+    "precion_Q": 91.5072,
+    "puntuacion_star": 4,
+    "categoria": "sit"
+  },
+  {
+    "id_pelicula": 7169744,
+    "nombre_pelicula": "Darlene Melendez",
+    "paginas": 834,
+    "descripcion": "Ex mollit proident incididunt nulla pariatur veniam adipisicing quis aliqua fugiat do exercitation ut. Ad dolore minim adipisicing et et et. Nisi sit incididunt enim ad esse labore qui consectetur Lorem esse. Anim anim cillum velit adipisicing. Ad elit culpa sunt mollit et sint nostrud veniam aute veniam. Magna officia fugiat qui officia labore. Commodo cillum sunt magna id voluptate.\r\n",
+    "precion_Q": 917.6706,
+    "puntuacion_star": 4,
+    "categoria": "culpa"
+  },
+  {
+    "id_pelicula": 2463582,
+    "nombre_pelicula": "Mcbride Kaufman",
+    "paginas": 479,
+    "descripcion": "Fugiat commodo laboris ea proident dolore elit qui commodo deserunt nostrud ut consectetur. Occaecat eu cupidatat amet consequat enim elit labore eiusmod adipisicing ipsum irure consectetur tempor. Sunt fugiat mollit amet in reprehenderit sint nostrud id et nisi enim voluptate. Consequat sunt incididunt cillum occaecat nulla in sunt laboris eu aliqua dolore aliquip commodo. Proident duis ex aliqua anim elit. Quis incididunt qui ad nulla consequat nostrud laborum esse fugiat non cupidatat ex commodo labore. Lorem voluptate aliquip incididunt amet ipsum nisi ad excepteur eiusmod.\r\n",
+    "precion_Q": 868.4194,
+    "puntuacion_star": 4,
+    "categoria": "qui"
+  },
+  {
+    "id_pelicula": 7055089,
+    "nombre_pelicula": "Waller Maldonado",
+    "paginas": 505,
+    "descripcion": "Veniam aute magna ea voluptate. Esse dolor quis laborum cillum pariatur pariatur et non proident. Id ut sunt fugiat dolore deserunt. Duis nulla ex ex sunt eu laboris elit anim anim id ut mollit. Laboris id aute et sint consequat et nostrud ullamco laborum proident voluptate.\r\n",
+    "precion_Q": 699.112,
+    "puntuacion_star": 2,
+    "categoria": "officia"
+  },
+  {
+    "id_pelicula": 1278464,
+    "nombre_pelicula": "Sloan Pitts",
+    "paginas": 134,
+    "descripcion": "Exercitation veniam laboris exercitation deserunt minim labore pariatur. Ullamco eiusmod anim occaecat est dolore do officia dolor. Ut in exercitation dolore enim aute.\r\n",
+    "precion_Q": 740.0562,
+    "puntuacion_star": 3,
+    "categoria": "nisi"
+  },
+  {
+    "id_pelicula": 8599499,
+    "nombre_pelicula": "Pauline Rose",
+    "paginas": 674,
+    "descripcion": "Labore Lorem consequat occaecat magna excepteur dolore cillum duis Lorem. Fugiat consectetur nostrud sunt nulla labore amet tempor adipisicing sint cillum voluptate. Cillum amet commodo irure incididunt enim id in aute nostrud voluptate consequat consequat. Eu do commodo velit minim nisi enim fugiat est consequat nisi aliqua voluptate sunt. Irure duis sint deserunt voluptate nulla et esse occaecat commodo. Officia ex proident adipisicing aliqua quis cupidatat consequat.\r\n",
+    "precion_Q": 635.8037,
+    "puntuacion_star": 3,
+    "categoria": "ut"
+  },
+  {
+    "id_pelicula": 4456064,
+    "nombre_pelicula": "Maritza Finch",
+    "paginas": 438,
+    "descripcion": "Dolor mollit incididunt ut ut incididunt ullamco nulla ipsum cillum Lorem aute. Quis pariatur consequat mollit anim Lorem officia non aliqua cupidatat non irure laboris aute fugiat. Aliquip nisi laborum reprehenderit esse anim mollit eiusmod. Nulla excepteur dolor adipisicing adipisicing deserunt quis occaecat. Consectetur irure duis anim consequat culpa deserunt irure eiusmod amet cillum esse.\r\n",
+    "precion_Q": 609.8247,
+    "puntuacion_star": 3,
+    "categoria": "ut"
+  },
+  {
+    "id_pelicula": 4157531,
+    "nombre_pelicula": "Joan Carlson",
+    "paginas": 243,
+    "descripcion": "Est deserunt eu ad irure officia consectetur. Non mollit officia ullamco culpa magna fugiat tempor et. Do nostrud veniam exercitation id. Sint quis deserunt aliqua non mollit id minim voluptate proident.\r\n",
+    "precion_Q": 988.9376,
+    "puntuacion_star": 4,
+    "categoria": "et"
+  },
+  {
+    "id_pelicula": 5276710,
+    "nombre_pelicula": "Sargent Lucas",
+    "paginas": 537,
+    "descripcion": "Amet id ullamco aliqua dolor. Enim non nulla fugiat deserunt. Exercitation elit cupidatat commodo quis magna occaecat. Esse fugiat non nisi culpa non pariatur ipsum minim. Lorem dolor aliqua qui mollit ipsum deserunt exercitation. Esse commodo et pariatur commodo cupidatat consequat est sit consequat non non magna irure veniam. Sit eu id voluptate esse aliqua ea.\r\n",
+    "precion_Q": 429.8811,
+    "puntuacion_star": 1,
+    "categoria": "proident"
+  },
+  {
+    "id_pelicula": 3607409,
+    "nombre_pelicula": "Luna Maxwell",
+    "paginas": 39,
+    "descripcion": "Ut culpa esse ad reprehenderit ut fugiat duis duis cillum tempor proident. Laborum dolore reprehenderit qui minim tempor laborum in incididunt ad aute id fugiat et qui. Dolor aliqua reprehenderit irure do pariatur. Amet irure Lorem officia cillum do quis in tempor. Eiusmod officia dolor adipisicing eu dolor elit irure qui veniam proident sunt. Elit officia dolor in duis aliqua exercitation mollit aute ea in nisi dolor est cillum.\r\n",
+    "precion_Q": 643.0731,
+    "puntuacion_star": 3,
+    "categoria": "nisi"
+  },
+  {
+    "id_pelicula": 6918427,
+    "nombre_pelicula": "Linda Mcintosh",
+    "paginas": 849,
+    "descripcion": "Sunt sit labore quis laboris. Excepteur tempor esse est eiusmod ut nostrud elit enim. Cupidatat qui ut officia sit. Exercitation anim magna est voluptate. Irure elit mollit enim ex esse ad aliqua Lorem sint qui cillum. Occaecat est magna ad officia duis exercitation est sunt eu in culpa.\r\n",
+    "precion_Q": 235.0127,
+    "puntuacion_star": 4,
+    "categoria": "minim"
+  },
+  {
+    "id_pelicula": 3627537,
+    "nombre_pelicula": "Beatrice Gentry",
+    "paginas": 797,
+    "descripcion": "Lorem pariatur elit enim labore. Pariatur duis reprehenderit dolore qui est irure. Ea ex veniam sit fugiat aliquip sunt tempor mollit eiusmod ex voluptate. Eu adipisicing dolor consequat nostrud nulla sint mollit non. Id cupidatat magna duis do consequat id quis sint consequat veniam laborum. Deserunt aliqua dolor eu laboris laboris adipisicing aute deserunt aute anim.\r\n",
+    "precion_Q": 256.1475,
+    "puntuacion_star": 4,
+    "categoria": "eu"
+  },
+  {
+    "id_pelicula": 316947,
+    "nombre_pelicula": "Walters Chase",
+    "paginas": 278,
+    "descripcion": "Mollit velit cupidatat irure adipisicing Lorem esse minim reprehenderit nostrud non proident adipisicing ut labore. Ullamco consectetur irure occaecat tempor. Amet do mollit ea nostrud elit occaecat. Aute id aute ut duis non irure.\r\n",
+    "precion_Q": 706.7413,
+    "puntuacion_star": 2,
+    "categoria": "sunt"
+  },
+  {
+    "id_pelicula": 6324963,
+    "nombre_pelicula": "Elena Hensley",
+    "paginas": 598,
+    "descripcion": "Occaecat eiusmod ut ullamco nisi in. Aliqua cupidatat eiusmod consequat sit. Lorem reprehenderit deserunt esse id nulla consequat adipisicing sint officia excepteur. Dolore veniam proident culpa labore enim dolor pariatur occaecat labore dolore ad occaecat dolore. Elit ad occaecat mollit occaecat laboris elit do fugiat pariatur aliqua. Laborum dolore aute anim irure irure nulla reprehenderit qui. Esse culpa do proident voluptate nostrud et id sunt nostrud ipsum irure id.\r\n",
+    "precion_Q": 142.4702,
+    "puntuacion_star": 3,
+    "categoria": "excepteur"
+  },
+  {
+    "id_pelicula": 275681,
+    "nombre_pelicula": "Cash Schmidt",
+    "paginas": 913,
+    "descripcion": "Irure sint veniam elit Lorem. Enim velit dolore nostrud mollit aliqua Lorem labore. Consectetur proident commodo exercitation ex proident.\r\n",
+    "precion_Q": 583.8292,
+    "puntuacion_star": 4,
+    "categoria": "culpa"
+  },
+  {
+    "id_pelicula": 1917852,
+    "nombre_pelicula": "Santiago Page",
+    "paginas": 108,
+    "descripcion": "Officia aliqua incididunt Lorem cillum. Officia ad fugiat officia ex ipsum ad nostrud sunt Lorem eiusmod et est. Labore eu elit eiusmod ut ipsum occaecat dolore nisi incididunt velit cupidatat. Voluptate fugiat eu reprehenderit eu reprehenderit ut quis id. Minim pariatur nostrud ut minim proident proident veniam non deserunt ullamco enim irure esse.\r\n",
+    "precion_Q": 496.8192,
+    "puntuacion_star": 1,
+    "categoria": "esse"
+  },
+  {
+    "id_pelicula": 7945187,
+    "nombre_pelicula": "Daisy Bender",
+    "paginas": 391,
+    "descripcion": "Aliquip do ullamco exercitation ipsum. Et aliquip aliquip nisi sunt cillum esse enim. Pariatur ex irure do id aliqua labore occaecat nulla id sint. Magna consequat eiusmod reprehenderit pariatur nostrud.\r\n",
+    "precion_Q": 249.4413,
+    "puntuacion_star": 4,
+    "categoria": "ipsum"
+  },
+  {
+    "id_pelicula": 4084430,
+    "nombre_pelicula": "Lott Moreno",
+    "paginas": 337,
+    "descripcion": "Labore fugiat ullamco dolor ad. Labore adipisicing nulla voluptate ut aliquip culpa eu ea et sunt pariatur nostrud minim. Proident culpa voluptate nulla ea qui pariatur laborum cillum eiusmod occaecat Lorem. Elit tempor dolor magna elit ipsum pariatur pariatur exercitation sunt eiusmod. Enim reprehenderit elit adipisicing tempor enim.\r\n",
+    "precion_Q": 409.8931,
+    "puntuacion_star": 3,
+    "categoria": "proident"
+  },
+  {
+    "id_pelicula": 3931527,
+    "nombre_pelicula": "Sears Wood",
+    "paginas": 458,
+    "descripcion": "Consectetur sit nulla deserunt esse non et dolor cillum duis reprehenderit. Occaecat aliqua sunt adipisicing enim excepteur et ut voluptate in pariatur nisi dolor sunt nostrud. Do dolore ex amet do consectetur.\r\n",
+    "precion_Q": 227.2272,
+    "puntuacion_star": 4,
+    "categoria": "minim"
+  },
+  {
+    "id_pelicula": 5161956,
+    "nombre_pelicula": "Glover Noble",
+    "paginas": 705,
+    "descripcion": "Adipisicing elit non magna deserunt cillum sit elit aute velit consectetur. Id proident ex dolor incididunt velit duis dolor adipisicing velit fugiat cupidatat velit laboris. Reprehenderit magna duis incididunt consequat nisi excepteur laborum ex ea est duis. Nostrud dolor pariatur commodo aliquip ea eu. Nulla ipsum deserunt magna velit elit nulla eu eiusmod laborum tempor reprehenderit. Esse labore adipisicing nulla nostrud. Excepteur nulla commodo esse reprehenderit ipsum Lorem esse sit ea non quis irure eiusmod voluptate.\r\n",
+    "precion_Q": 991.9533,
+    "puntuacion_star": 2,
+    "categoria": "amet"
+  },
+  {
+    "id_pelicula": 8089867,
+    "nombre_pelicula": "Eugenia Stark",
+    "paginas": 622,
+    "descripcion": "Sint enim non nisi dolore laborum commodo labore anim esse nulla ut sint dolor. Nostrud eiusmod est esse sint officia. Proident dolore non tempor elit commodo sunt eiusmod est eiusmod. Irure sit ex id pariatur irure quis elit duis exercitation est quis. Quis veniam sit officia nisi est commodo pariatur.\r\n",
+    "precion_Q": 847.5738,
+    "puntuacion_star": 2,
+    "categoria": "et"
+  },
+  {
+    "id_pelicula": 5704194,
+    "nombre_pelicula": "Carey Taylor",
+    "paginas": 46,
+    "descripcion": "Sit aliquip est labore Lorem excepteur voluptate occaecat commodo. Aliquip sunt adipisicing ipsum excepteur. Eiusmod adipisicing sunt officia sunt quis cillum laborum. Quis sunt eu amet adipisicing non do nostrud. Qui id qui irure excepteur incididunt sint magna quis ut. Consequat laborum sit consequat consectetur. Ad voluptate fugiat ad nostrud qui.\r\n",
+    "precion_Q": 197.5043,
+    "puntuacion_star": 2,
+    "categoria": "ea"
+  },
+  {
+    "id_pelicula": 179733,
+    "nombre_pelicula": "Lillian Shaffer",
+    "paginas": 673,
+    "descripcion": "Veniam est in non cillum reprehenderit aute. Lorem veniam do laboris esse exercitation anim dolore ipsum tempor. Eiusmod minim Lorem fugiat sit eiusmod ex. Nisi dolore officia tempor excepteur aliqua. Nisi elit enim irure sint ad et labore eu reprehenderit proident laboris mollit minim. Ipsum cillum anim ea dolore eu aliquip sint in.\r\n",
+    "precion_Q": 219.2164,
+    "puntuacion_star": 4,
+    "categoria": "proident"
+  },
+  {
+    "id_pelicula": 7015531,
+    "nombre_pelicula": "Macias Jordan",
+    "paginas": 526,
+    "descripcion": "Magna culpa ex cupidatat non sunt id cupidatat elit tempor dolore sit esse occaecat. Ut ad fugiat qui occaecat elit et laborum duis. Eiusmod dolore officia aliquip proident do do anim nulla dolor commodo consequat commodo. Pariatur laborum sint velit laboris deserunt pariatur duis voluptate fugiat officia.\r\n",
+    "precion_Q": 995.6183,
+    "puntuacion_star": 3,
+    "categoria": "magna"
+  },
+  {
+    "id_pelicula": 980115,
+    "nombre_pelicula": "Cassie Casey",
+    "paginas": 639,
+    "descripcion": "Fugiat veniam minim duis eu officia anim consequat occaecat tempor ea incididunt fugiat excepteur ex. Id veniam nisi ea qui est. Anim pariatur aute ex dolore et voluptate incididunt officia. Cupidatat occaecat ad irure cillum in aliqua proident do in dolor id ex.\r\n",
+    "precion_Q": 570.7097,
+    "puntuacion_star": 5,
+    "categoria": "consectetur"
+  },
+  {
+    "id_pelicula": 3162981,
+    "nombre_pelicula": "Noemi Strickland",
+    "paginas": 867,
+    "descripcion": "Amet et proident ullamco dolore est irure. Dolore irure est adipisicing ullamco. Do in mollit amet magna veniam laborum non reprehenderit laborum consectetur consectetur dolor sit. Magna laborum irure exercitation sunt amet quis nostrud cupidatat voluptate magna ea ex cillum ea. Enim aliquip laborum cillum ea minim.\r\n",
+    "precion_Q": 82.1796,
+    "puntuacion_star": 1,
+    "categoria": "officia"
+  },
+  {
+    "id_pelicula": 4363720,
+    "nombre_pelicula": "Vanessa Merrill",
+    "paginas": 571,
+    "descripcion": "Ex et occaecat Lorem ut commodo Lorem magna ex sint mollit commodo voluptate consequat elit. Dolore enim exercitation aliqua do ex eu. Aute pariatur officia eiusmod fugiat velit sunt proident anim elit aute. Deserunt mollit ullamco nulla est cillum cillum laboris veniam adipisicing laborum occaecat officia laborum esse. Sit mollit Lorem id velit sint voluptate qui nisi.\r\n",
+    "precion_Q": 712.9571,
+    "puntuacion_star": 1,
+    "categoria": "voluptate"
+  },
+  {
+    "id_pelicula": 4611451,
+    "nombre_pelicula": "Paul Adkins",
+    "paginas": 362,
+    "descripcion": "Est eiusmod cupidatat enim pariatur adipisicing aute pariatur adipisicing labore ad elit. Exercitation velit aute ex quis commodo pariatur ut. Culpa et do duis sit Lorem qui in voluptate reprehenderit exercitation pariatur. Irure eiusmod ex veniam veniam Lorem. Occaecat non do mollit mollit exercitation eiusmod excepteur non. Laborum magna consequat eiusmod eu est id occaecat nostrud sunt est occaecat exercitation.\r\n",
+    "precion_Q": 2.001,
+    "puntuacion_star": 3,
+    "categoria": "enim"
+  },
+  {
+    "id_pelicula": 8105202,
+    "nombre_pelicula": "Florence Stuart",
+    "paginas": 597,
+    "descripcion": "Sint irure in proident minim. Aute ex nulla elit enim anim proident mollit duis. In excepteur minim nulla quis consequat amet nisi. Elit consequat non incididunt qui qui excepteur exercitation aliqua eu reprehenderit. Lorem reprehenderit cupidatat irure sit esse amet occaecat aliquip anim laboris adipisicing Lorem eu. Laborum officia consectetur velit pariatur non nulla.\r\n",
+    "precion_Q": 351.7006,
+    "puntuacion_star": 5,
+    "categoria": "deserunt"
+  },
+  {
+    "id_pelicula": 751861,
+    "nombre_pelicula": "Marian Abbott",
+    "paginas": 160,
+    "descripcion": "Reprehenderit voluptate non ea eu veniam ipsum cillum laborum excepteur aliquip dolor elit. Eu dolor excepteur velit proident occaecat non eiusmod velit minim sit adipisicing. Ea exercitation laborum incididunt exercitation duis minim mollit. Lorem quis dolore sint exercitation est fugiat pariatur non commodo magna quis. Elit quis nostrud exercitation incididunt nostrud irure ullamco occaecat labore officia adipisicing quis ut.\r\n",
+    "precion_Q": 709.3155,
+    "puntuacion_star": 4,
+    "categoria": "exercitation"
+  }
+]
